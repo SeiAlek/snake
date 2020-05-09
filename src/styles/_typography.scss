@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #3b6978;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  @extend %h1;
+}

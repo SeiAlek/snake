@@ -1,0 +1,125 @@
+@import "utils";
+
+.game {
+  display: inline-block;
+
+  &__control {
+    margin: 0 0 ($unit * 2);
+
+    @media screen and (max-width: 768px) {
+      margin: 6px 0;
+    }
+  }
+
+  &__start {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
+    width: 80%;
+    margin: ($unit * 2) auto;
+  }
+
+  &__congrat {
+    text-align: center;
+    text-shadow: 1px 1px 8px $c-dark;
+    color: $c-light;
+  }
+
+  &__congrat-image {
+    max-width: 100px;
+  }
+
+  &__field {
+    position: relative;
+    display: block;
+    margin: auto;
+    box-sizing: content-box;
+    box-shadow: 0 0 ($unit * 3) rgba(32, 64, 81, 0.3) inset;
+    background-color: rgba(202, 232, 213, 0.8);
+    border: 1px solid rgba(32, 64, 81, 0.8);
+    border-radius: ($unit / 2);
+  }
+
+  &__field-wrapper {
+    background-image: url(../images/snake.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__container {
+    padding: 0 ($unit * 2);
+    text-align: center;
+  }
+
+  &__input {
+    width: 100%;
+    padding: ($unit / 2) ($unit);
+    font-size: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid $c-dark;
+    border-radius: ($unit / 2);
+    transition: box-shadow 0.3s;
+    outline: none;
+  }
+
+  &__start-btn {
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+    padding: ($unit / 2) ($unit);
+    font-size: 30px;
+    background-color: $c-dark;
+    border: 1px solid $c-dark;
+    border-radius: ($unit / 2);
+    font-weight: bold;
+    color: $c-light;
+    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+    outline: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $c-blue;
+      color: $c-dark;
+      box-shadow: 0 0 ($unit * 3) rgba(32, 64, 81, 0.8);
+    }
+  }
+
+  &__high-score {
+    color: $c-navy;
+    text-align: center;
+  }
+
+  &__high-score-table {
+    width: 100%;
+    margin: ($unit * 3) 0;
+    text-align: center;
+    background-color: $c-dark;
+    box-shadow: 0 0 ($unit * 3) rgba(202, 232, 213, 1);
+    border-radius: ($unit / 2);
+
+    & th {
+      padding: ($unit / 2) ($unit);
+      color: $c-light;
+      background-color: $c-dark;
+    }
+
+    & td {
+      padding: ($unit / 4) ($unit / 2);
+      border-radius: ($unit / 4);
+      color: $c-dark;
+    }
+  }
+
+  &__row {
+    background-color: $c-blue;
+  }
+
+  &__row-highlight {
+    background-color: $c-highlight;
+  }
+}

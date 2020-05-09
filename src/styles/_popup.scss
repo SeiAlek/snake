@@ -1,0 +1,48 @@
+@import "utils";
+
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(32, 64, 81, 0.8);
+  z-index: 1000;
+
+  &__container {
+    padding: ($unit * 2) ($unit * 4);
+    text-align: center;
+    color: $c-light;
+    box-shadow: 0 0 ($unit * 3) rgba(202, 232, 213, 1);
+    background-color: $c-dark;
+    border: 1px solid $c-dark;
+    border-radius: ($unit / 2);
+  }
+
+  &__button {
+    padding: ($unit / 4) ($unit * 2);
+    color: $c-light;
+    box-shadow: 0 0 ($unit * 3) rgba(32, 64, 81, 0.8);
+    background-color: $c-navy;
+    border-radius: ($unit / 4);
+    border-color: transparent;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 ($unit / 2) rgba(202, 232, 213, 1);
+    }
+
+    &--cancel {
+      background-color: red;
+    }
+
+    &--apply {
+      background-color: green;
+    }
+  }
+}
